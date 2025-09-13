@@ -7,4 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    outDir: 'dist', // Vercel expects the build output here
+  },
+  server: {
+    port: 3000, // Vercel uses this during dev preview
+    strictPort: true,
+  }
 });
